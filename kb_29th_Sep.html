@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honda FAQ</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+  }
+
+  header {
+    background-color: #D60000; /* Honda Red */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .category-btn {
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #D60000; /* Honda Red */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  .category-btn:hover {
+    background-color: #a30000;
+  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honda FAQ</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+  }
+
+  /* Header with logo */
+  header {
+    background-color: #ffffff;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  header img {
+    height: 60px;
+  }
+
+  header h1 {
+    margin-left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #D60000;
+  }
+
+  .category-btn {
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #D60000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+
+  .category-btn:hover {
+    background-color: #a30000;
+  }
+
+  .faq-item {
+    margin: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+
+  .faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    color: #D60000;
+  }
+
+  .faq-answer {
+    display: none;
+    margin-top: 5px;
+    padding-left: 10px;
+    color: #333;
+  }
+
+  #category-container {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  #faq-container {
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 50px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://www.hondacarindia.com/honda-assets/images/logo.png" alt="Honda Logo">
+  <h1>Honda FAQ</h1>
+</header>
+
+<div id="category-container">
+  <button class="category-btn" onclick="showCategory('product')">Product Knowledge</button>
+  <button class="category-btn" onclick="showCategory('rsa')">Roadside Assistance</button>
+  <button class="category-btn" onclick="showCategory('adas')">ADAS</button>
+  <button class="category-btn" onclick="showCategory('ac')">Air Conditioning (AC)</button>
+  <button class="category-btn" onclick="showCategory('battery')">Battery & Electricals</button>
+  <button class="category-btn" onclick="showCategory('brakes')">Brakes, Suspension & Tyres</button>
+  <button class="category-btn" onclick="showCategory('engine')">Engine & Fuel</button>
+  <button class="category-btn" onclick="showCategory('general')">General Queries</button>
+  <button class="category-btn" onclick="showCategory('maintenance')">Maintenance & Appointments</button>
+  <button class="category-btn" onclick="showCategory('safety')">Safety</button>
+  <button class="category-btn" onclick="showCategory('warranty')">Warranty Information</button>
+</div>
+
+<div id="faq-container">
+
+<script>
+const faqs = {
+ product: [
+    {
+        question: "I have noticed that my Honda vehicle’s headlights and taillights develop condensation or moisture inside during rainy or humid conditions. What causes this, and should I be concerned about it?",
+        answer: "It is normal for the headlights and taillights of your Honda vehicle to develop minor condensation or moisture under rainy or humid conditions. This can occur when moisture enters the lenses after driving in the rain or through a car wash, or due to a temperature difference between the ambient air and the inside of the lens and does not indicate any defect or malfunction.<br><br>However, if you notice large amounts of water inside the lenses or persistent condensation, have your lights professionally inspected at a Honda authorized dealership to ensure optimal performance and safety."
+    },
+    {
+        question: "During summers, I want to ensure my Honda vehicle remains in optimal condition. What precautions should I take to protect my car?",
+        answer: "Kindly follow the below given tips to ensure that your Honda vehicle performs optimally in summer months:<br>1. Parking: Whenever possible, park your vehicle in shaded areas or use sunshades to help reduce cabin temperature.<br>2. Tyre Care: Maintain the recommended tyre pressure at all times, as high temperatures can impact tyre performance and safety.<br>3. Air Conditioning: Ensure the air conditioning system is functioning efficiently to maintain a comfortable cabin environment.<br>4. Scheduled Maintenance: Visit an authorised Honda dealership for periodic inspections to ensure overall vehicle performance, including the tyres and air conditioning system.<br><br>For more detailed guidance, please refer to our dedicated page: Honda Summer Driving Tips."
+    },
+    {
+        question: "During monsoon, what maintenance measures should I undertake to ensure my Honda vehicle remains safe and reliable?",
+        answer: "To ensure safety, comfort, and reliability during the monsoon season, we recommend the following:<br>1. Wiper Blades: Regularly inspect the wiper blades and replace them if worn to maintain clear visibility during heavy rain.<br>2. Headlights and Indicators: Ensure all exterior lights, including headlights, tail lamps, and turn indicators, are functioning properly for safe driving in low-visibility conditions.<br>3. Drain Holes (Doors & Sunroof, if equipped): Check and clean drain holes to prevent water accumulation inside the vehicle.<br><br>For more detailed guidance and tips on safe monsoon driving, please visit: Honda Monsoon Driving Tips."
+    }
+], 
+
+rsa: [
+    {
+        question: "I am considering purchasing a Honda vehicle and want to ensure I have access to support in case of emergencies. Does Honda offer Roadside Assistance (RSA) for their cars, and what services are included?",
+        answer: "Yes, Honda provides 24x7 Roadside Assistance. Honda offers different RSA packages to suit varying customer needs, typically including:<br><br><strong>Standard RSA:</strong><br>- Provides basic 24×7 emergency support for breakdowns, accidental damage, fuel delivery, tyre issues, battery jump-starts, and key lockout assistance.<br>- Towing to the nearest Honda authorized dealership if on-site repair is not possible.<br><br><strong>RSA+:</strong><br>- Includes all services under Standard RSA.<br>- Additional benefits such as taxi service (up to a specified distance) and hotel accommodation in case of breakdowns far from home.<br>- Designed for customers who may require extra support during long trips or travel.<br><br>Both types are valid only for vehicles covered under an active RSA policy and can be availed through Honda authorized dealerships or H-Connect App."
+    },
+    {
+        question: "What kind of assistance does Honda Roadside Assistance (RSA) provide, and how is my vehicle recovered safely?",
+        answer: "If you have an active Honda RSA policy, the Roadside Assistance team provides support for various situations, including:<br>- <strong>Breakdowns:</strong> On-site repair or towing to the nearest Honda authorized dealer.<br>- <strong>Accidental Damage:</strong> Safe towing to the nearest Honda authorized dealer.<br>- <strong>Fuel Issues:</strong> Assistance for vehicles that run out of fuel, have incorrect fuel, or contaminated fuel.<br>- <strong>Tyre Issues:</strong> Support for punctures, loose bolts, or valve-related problems.<br><br>If the vehicle is non-movable, it will be transported to the nearest Honda authorized dealer using a flatbed or towing vehicle, depending on the facilities available at the breakdown location. This ensures safe recovery and enables timely repair."
+    },
+    {
+        question: "My car has broken down. What steps should I take to address the situation? Is paid Roadside Assistance (RSA) available, and what are the associated charges?",
+        answer: "In the event of a breakdown, follow these steps:<br>- If you have an active Honda RSA policy: Contact your service provider directly: Europ Assistance: 1800 103 5130 or Allianz Assistance: 1800 103 3121.<br>- Alternatively, call Honda 121 at 1800 113 121 and connect to the RSA provider through the IVR system.<br>- In case you do not have an active RSA policy: Paid Roadside Assistance services are available through the RSA provider. Charges for the same will depend on the breakdown location's distance from the nearest Honda Authorised dealer. The same will be communicated to you before initiating the Roadside Assistance request."
+    },
+    {
+        question: "If my car key becomes non-functional, will the Honda Roadside Assistance team provide assistance in such circumstances?",
+        answer: "Yes, Honda Roadside Assistance will provide support if your vehicle key becomes non-functional. The assistance includes towing your vehicle to the nearest authorised Honda dealership.<br><br>For safety reasons, keys are not stocked at dealerships and must be ordered when required. For immediate support, please contact the Honda Roadside Assistance team directly."
+    },
+    {
+        question: "In the event of a vehicle breakdown, am I eligible for taxi services or hotel accommodation through Honda Roadside Assistance (RSA)?",
+        answer: "Yes. If you have an active RSA policy, taxi service up to 50 km is provided. If you have an RSA+ policy, hotel accommodation is also included. For details, please refer to your roadside assistance policy’s terms and conditions."
+    }
+],
+
+  adas: [
+    {
+        question: "What is Collision Warning with Collision Mitigation Braking System (CMBS)? How does it get activated?",
+        answer: "The Collision Mitigation Braking System (CMBS) is an advanced driver-assist feature designed to enhance safety by reducing the risk of frontal collisions. The system continuously monitors the road ahead and, when it detects a potential collision with a vehicle, pedestrian, or moving bicycle, it issues visual and audible warnings to alert the driver. If the driver does not take timely corrective action, CMBS automatically applies brake pressure to help avoid or reduce the severity of the impact.<br><br>CMBS is activated when the vehicle is moving at speeds of 5 km/h or more and can detect objects with a relative speed differential of 5 km/h or greater.<br><br>This feature is available only on select Limited models. Please refer to your vehicle’s Owner’s Manual for detailed information regarding the specific features and functions equipped in your car."
+    },
+    {
+        question: "While driving in heavy city traffic, I notice that the ADAS features keep applying the brakes frequently. Is there a way to deactivate or adjust these features while driving in such conditions?",
+        answer: "Yes, the Collision Mitigation Braking System (CMBS) can be temporarily deactivated if you wish to in heavy city traffic, as it may apply the brakes more frequently in such conditions. This setting can be adjusted each time the vehicle is restarted.<br><br>Since CMBS and other ADAS features are designed to enhance driving safety, it is strongly recommended to use such adjustments with caution and remain fully attentive while driving. Detailed instructions on deactivating or adjusting these systems can be found in your vehicle’s Owner’s Manual, which provides guidance specific to your model.<br><br>This feature is available only on select Limited models. Please consult your Owner’s Manual to confirm the features equipped in your vehicle."
+    },
+    {
+        question: "What is Lane Keep Assist System (LKAS)?",
+        answer: "The Lane Keeping Assist System (LKAS) is an advanced driver-assist feature designed to help keep your vehicle centered within its lane, enhancing safety and reducing driver fatigue during highway driving. LKAS employs a forward-facing camera to detect lane markings and provides gentle steering inputs to maintain the vehicle’s position within the lane.<br><br>The system activates when the vehicle is traveling at speeds typically above 72 km/h, lane markings are clearly visible, no turn signal is used (indicating an unintended lane drift), and LKAS is turned on via the driver assistance settings.<br><br>LKAS works in coordination with other safety features, including Road Departure Mitigation (RDM) and Adaptive Cruise Control (ACC), to provide a safer and more comfortable driving experience. This feature is available on select Limited models. Please refer to your Owner’s Manual for detailed information on the features equipped in your vehicle."
+    },
+    {
+        question: "What is Road Departure Mitigation (RDM) with Lane Departure Warning? When does it get activated?",
+        answer: "The Road Departure Mitigation system is an advanced driver assist feature designed to help prevent unintentional lane departures and roadway departures. The system alerts the driver if the vehicle drifts out of its lane without signaling and can provide gentle steering or braking assistance to help guide the vehicle back onto the road.<br><br><strong>Activation Conditions:</strong><br>1. The vehicle is traveling at moderate to high speeds (typically 45–145 km/h).<br>2. Lane markings are clearly visible.<br>3. No turn signal is used, indicating the lane departure is unintentional.<br><br>This feature is available on select Limited models. For detailed instructions on activation, operation, and limitations, please refer to your vehicle’s Owner’s Manual."
+    },
+    {
+        question: "What is Auto High Beam (AHB) and when does it get activated?",
+        answer: "The Auto High-Beam (AHB) system is an advanced driver assist feature in Honda vehicles which automatically switches the headlights between high beam and low beam while driving at night. Using a front wide-view camera, it detects oncoming vehicles, preceding traffic, and street lighting to optimize visibility without dazzling other drivers.<br><br><strong>1. High Beam Activation:</strong> Engages when the vehicle speed is above 30 km/h, there are no vehicles ahead, and street lighting is minimal.<br><strong>2. Low Beam Activation:</strong> Reverts when oncoming or preceding vehicles are detected, the speed drops below 24 km/h, or street lighting is sufficient.<br><br>This feature is available on select Limited models. For detailed instructions on activation, operation, and limitations, please refer to your vehicle’s Owner’s Manual."
+    }
+],
+  ac: [
+    {
+        question: "How can I get the best performance from my car’s AC system while ensuring optimal cooling and efficiency?",
+        answer: "To get the best performance from your Honda vehicle’s AC system while ensuring optimal cooling and efficiency:<br>1. Use Max Cool setting with Recirculation mode.<br>2. Keep all windows closed to prevent hot outside air from entering. Use Car Shade (if possible).<br>3. Use Auto mode to allow the system to automatically adjust fan speed, airflow, and temperature.<br>4. Perform regular AC maintenance, including cleaning and timely replacement of pollen filter."
+    },
+    {
+        question: "Why does water drip from under my car when the AC is running? Should I be concerned?",
+        answer: "Water dripping from under the car while using the AC is normal. It occurs because the AC system removes moisture from the air, which then collects and drains out as water through a pipe. This is a common part of how the AC cools the cabin and doesn’t indicate a problem unless accompanied by unusual smells or excessive leakage."
+    },
+    {
+        question: "I’ve observed that the AC doesn’t cool the cabin effectively when the car is idling, especially in hot weather. Should I be concerned?",
+        answer: "The air conditioning system's cooling efficiency is reduced when the vehicle is idling due to lower engine RPM, which decreases the power available to the compressor. This limitation affects the system's ability to cool the cabin effectively. Additionally, operating the air conditioning while idling increases fuel consumption, therefore it is recommended to use the system while driving to maintain optimal cooling performance and fuel efficiency."
+    },
+    {
+        question: "I have noticed that my Honda vehicle's windshield tends to fog up during rainy conditions. Is this normal behavior, and what measures can I take to address this?",
+        answer: "Yes, windshield fogging during rainy or humid conditions is normal, as it occurs due to condensation. To address this, use the windshield defogger function, direct airflow to the windshield, and switch on the air conditioning/heating to dehumidify the air. Please refer to your Owner’s Manual for specific instructions and visit your nearest authorized Honda dealer for further guidance."
+    },
+    {
+        question: "I’ve observed that the airflow from my Honda vehicle’s AC vents has reduced, which is affecting cabin cooling. What could be the possible reasons and how can I resolve this?",
+        answer: "Reduced airflow from the AC can result from a clogged cabin air filter, blocked vents, or issues with the blower motor. To resolve this, kindly visit your nearest Honda authorised dealer."
+    }
+],
+  battery: [
+    {
+        question: "I want my Honda vehicle’s battery to last longer and remain reliable. What steps can I take to extend its life?",
+        answer: "To extend your Honda vehicle's battery life and maintain reliability, follow the recommended periodic maintenance schedule, adhere to proper long-term storage guidelines as outlined in your Owner's Manual, and have the battery inspected during each service visit at a Honda Authorized Dealer."
+    },
+    {
+        question: "How can I tell if my Honda vehicle’s battery is weak? If so, how can I get it replaced?",
+        answer: "Signs of a weak battery may include difficulty in starting the engine, slow or weak cranking, dimming of headlights or dashboard lights, and a noticeably weak horn sound. If you notice any of these symptoms, it is advisable to visit an authorized Honda dealership. Should replacement be necessary, the dealer will assist you with genuine Honda-recommended battery replacement to ensure reliable performance and safety."
+    },
+    {
+        question: "The battery warning light on my dashboard stays illuminated while driving. What does this indicate, and what should I do?",
+        answer: "A continuously illuminated battery warning light may indicate a malfunction in the vehicle’s charging system, such as a faulty alternator or drive belt. It is recommended to have the system inspected promptly by a Honda authorized dealer to prevent potential breakdowns."
+    },
+    {
+        question: "I’ve been experiencing frequent battery drain in my Honda vehicle, which concerns me regarding starting issues and electrical problems. What are the common causes, and how can I fix it?",
+        answer: "Frequent battery drain may be caused by electrical leaks, a weak alternator/battery, or other underlying issues within the vehicle’s electrical system. A professional inspection at a Honda authorized service center is recommended to diagnose and resolve the problem efficiently."
+    },
+    {
+        question: "I haven’t used my car for a long time/accidentally left the internal roof light on for more than a day. Now my Honda vehicle won’t start. What should I do?",
+        answer: "If your car does not start due to a drained battery, contact Honda Roadside Assistance (RSA) or visit a Honda authorized dealer. The battery may have discharged because electrical components remained active or the vehicle was unused for an extended period. Additionally, if you have Honda H-Connect, check whether SVT is active, as this feature can also contribute to battery drain."
+    },
+    {
+        question: "Can I replace my Honda vehicle’s battery from a local vendor, or should I use a specific type?",
+        answer: "Honda strongly recommends using genuine Honda batteries to ensure optimal performance, compatibility, and continued warranty protection. Non-genuine replacements may affect vehicle performance and void warranty coverage."
+    }
+],
+
+ brakes: [
+    {
+        question: "What could cause the brakes to feel spongy or ineffective, and how can I resolve this issue? Additionally, when should the brake pads be replaced?",
+        answer: "Reduced brake effectiveness can result from worn brake pads/shoe, low brake fluid, or air in the brake lines. Brake pads should be replaced when they reach the minimum thickness or if you notice squealing, grinding, or decreased braking performance. Visit a Honda authorized dealer for a thorough inspection."
+    },
+    {
+        question: "My car has rusting on the brake disc and axle. Is this normal? What should I do?",
+        answer: "Rust on brake discs and axles is superficial and develops naturally due to environmental exposure or infrequent use. This surface rust does not affect braking performance or the lifespan of the components and typically wears off after driving the vehicle for a short distance. However, if the rust persists or becomes pronounced despite regular driving, it is recommended to have your vehicle inspected at an authorized Honda dealership to ensure optimal performance and safety."
+    },
+    {
+        question: "Why does the brake pedal vibrate when I brake hard, and what should I do to address this issue?",
+        answer: "Brake pedal vibration during hard braking can indicate ABS (Anti-lock Braking System) activation, which helps prevent wheel lock-up and enhances vehicle control, ensuring safer braking. This pulsation is a normal part of the ABS operation and does not indicate a problem with the system. If the braking sensation is accompanied by noises other than the normal motor sounds of the ABS system, please visit a Honda authorized dealership to get the same inspected."
+    },
+    {
+        question: "While driving on rough or uneven roads, my car feels unusually bouncy or stiff, affecting ride comfort and handling. What is the reason, and what should I do?",
+        answer: "An unusually bouncy or stiff ride may indicate that the suspension system, including shock absorbers or struts, is worn or damaged, or that tyre pressure and alignment are not within recommended specifications. Maintaining proper suspension and tyre condition is essential for ride comfort, handling, and vehicle safety. To correct the same, it is recommended to: 1. Maintain tyre pressure as per specification (refer to Door Jamb Sticker or Owner’s Manual for details). 2. Replace worn-out tyres at an authorized Honda dealership. 3. Check and replace worn suspension components at a Honda authorized dealership."
+    },
+    {
+        question: "I want to understand how long my car’s tyres can safely last and how to maximize their lifespan.",
+        answer: "Several factors—including tyre pressure, driving habits, road conditions, vehicle load, and following routine maintenance—affect tyre life and performance. To maximize both, it is recommended to adhere to the following practices: 1. Maintain tyre pressure at the levels specified in the vehicle’s owner’s manual. 2. Perform periodic wheel alignment and balancing to prevent uneven tyre wear at an authorized Honda dealership. 3. Rotate tyres at regular intervals, as prescribed by Honda, at an authorized dealership."
+    },
+    {
+        question: "Tyres are a critical component of vehicle safety, handling, and performance. How can I accurately determine when my vehicle’s tyres have worn to the point where they need replacement?",
+        answer: "Tyres should be replaced when the tread depth falls below 1.6 mm or if they exhibit visible damage, such as cracks, bulges, cuts, or punctures. Regular inspection is essential to ensure vehicle safety and optimal performance. For detailed guidance, please refer to the Tyre Section of your Owner’s Manual. Professional inspection and replacement can be performed at any Honda authorized dealership. New tyres can also be purchased online through the following link: Honda Tyres and Battery Services."
+    },
+    {
+        question: "Can I replace my tyres with a different brand/specifications?",
+        answer: "Honda does not recommend using tyres of a different brand or specifications. Failure to follow this guidance may result in the following: 1. Using tyres of different specifications (size, load index, or speed rating) can compromise vehicle handling, braking performance, stability, and the effectiveness of safety systems such as ABS or VSA. It may also cause uneven tyre wear and place additional stress on suspension components. 2. Using tyres from a different manufacturer with the same specifications may result in minor variations in grip, tread pattern, or wear characteristics, which can slightly affect handling and uniformity. For optimal safety, performance, and tyre longevity, always adhere to the guidelines provided in your Owner’s Manual and have tyre replacement performed at a Honda authorized dealership."
+    },
+    {
+        question: "What is the importance of maintaining the correct tyre pressure in my Honda vehicle?",
+        answer: "Maintaining the correct tyre pressure is vital for your vehicle’s safety, performance, and efficiency. Properly inflated tyres ensure optimal handling, stability, and braking performance. The recommended tyre pressure for your vehicle can be found on the driver’s side doorjamb. After making any adjustments, ensure that the Tyre Pressure Monitoring System (TPMS), if available, is calibrated in accordance with the Owner’s Manual. For professional guidance or inspection, please visit a Honda authorized dealership."
+    },
+    {
+        question: "The Tyre Pressure Monitoring System (TPMS) warning light has turned on. What does it indicate, and how can I reset it?",
+        answer: "The TPMS or Deflation Warning System (DWS), if available, performs the function of monitoring tyre pressure. Instead of directly measuring the pressure in each tyre, the DWS monitors and compares the rolling radius and rotational characteristics of each wheel and tyre while you are driving to determine if one or more tyres are significantly under-inflated. The indicator comes on and stays on when one or more tyres' pressures are determined to be significantly low or if equipped with a compact spare tyre. If this occurs while driving, you should stop in a safe place, check tyre pressures, and inflate the tyre(s) if necessary. If the warning persists after inflating the tyres to the correct pressure, have your vehicle inspected at a Honda authorized dealership. For models not equipped with the DWS, a TPMS option is available as an accessory and can be purchased through any authorized Honda dealer."
+    },
+    {
+        question: "My Honda car’s spare tyre is smaller than the regular tyres. Why is it designed this way, and is it safe for long-distance driving?",
+        answer: "The spare tyre is smaller than the regular tyres to save space and reduce weight. It is intended for emergency use only and should be replaced with a full-size tyre at the earliest. Speed and Usage Guidelines: Regular Models – Keep speed under 120 km/h when driving with the temporary spare. eHEV Model – Keep speed under 80 km/h when driving with the compact spare. Note: The spare tyre reduces handling, traction, and ground clearance. Always perform tyre rotation with full-size tyres only."
+    },
+    {
+        question: "My tyres have worn out. Is it safe to continue driving, and what should I do?",
+        answer: "Worn-out tyres can significantly compromise handling, braking performance, and vehicle stability, and may cause the vehicle to pull to one side, making driving unsafe. To ensure optimal tyre performance and extended tyre life: 1. Perform wheel alignment, balancing, and tyre rotation at authorized Honda dealerships at the recommended intervals. 2. Maintain tyre pressure strictly as per specification. 3. Replace tyres promptly once they are worn beyond the safe tread limit. Proper tyre care is essential for ensuring a safe and worry-free driving experience."
+    },
+    {
+        question: "My car tends to pull to the left while driving. What are the possible reasons, and how can this be corrected?",
+        answer: "Vehicle pull may result from improper wheel alignment, uneven tyre pressure, or worn suspension components. A thorough inspection at a Honda authorized dealer is recommended to correct the same."
+    },
+    {
+        question: "My steering wheel wobbles while driving. What could cause this, and what should I do?",
+        answer: "Wobbling can indicate tyre imbalance, incorrect wheel alignment, or worn suspension parts. Have the vehicle inspected and serviced by a Honda authorized dealer for resolution of the same."
+    }
+],
+
+ engine: [
+    {
+        question: "I want to ensure my engine performs optimally but am unsure about the recommended oil grade and whether aftermarket oils are safe to use. Which engine oil should I use?",
+        answer: "Honda recommends using 0W-20 or 5W-30 multi-viscosity engine oil that meets the specifications outlined for your vehicle model. Always ensure the selected oil adheres to Honda’s requirements to maintain optimal engine performance. Honda does not recommend the use of aftermarket oils, as they may adversely affect vehicle performance and could impact warranty coverage."
+    },
+    {
+        question: "I noticed that my car’s radiator fan continues running even after I switch off the engine. Is this normal, and what should I do in this situation?",
+        answer: "Yes, this is completely normal. Your radiator fan continues running after engine shutdown to cool hot components and prevent overheating. Simply let it run until it stops automatically. In case you notice unusual symptoms, contact your Honda authorized dealer."
+    },
+    {
+        question: "My car shows an engine overheating warning while driving. What are the probable causes, and what steps should I take to resolve it?",
+        answer: "Park the vehicle in a safe location, switch off all accessories, and turn on the hazard lights. Contact Honda Roadside Assistance (RSA), our Contact Center, or your authorized dealership for assistance. Avoid driving the vehicle under these conditions."
+    },
+    {
+        question: "My Honda car is achieving less mileage compared to the figure mentioned on the website/product brochure. What should I do?",
+        answer: "The fuel consumption figures mentioned in the brochure are based on a test conducted under controlled conditions. Actual results may vary, as they depend on many variables such as driving habits, traffic conditions, tyre pressure, number of occupants, and regular maintenance."
+    },
+    {
+        question: "Under what circumstances does the Diesel Particulate Filter (DPF) become clogged, and how do I avoid this?",
+        answer: "The Diesel Particulate Filter (DPF) is an emission-control device located in the exhaust system, designed to trap and reduce particulate matter (PM) from diesel engine emissions. The DPF may become clogged if the vehicle is frequently driven at low speeds for a long period of time or by frequent short journeys where exhaust temperatures remain low. In such situations, please follow the below guidance: 1. In case DPF Indicator Blinking/Flashing: Drive the vehicle continuously for approximately 30 minutes at a minimum speed of 20 km/h until the indicator turns off. 2. In case DPF Indicator is Continuously ON: Visit the nearest authorized Honda dealer immediately for inspection and corrective action. Following these steps ensures proper DPF functioning and helps maintain engine performance while keeping emissions under control."
+    }
+],
+  general: [
+    {
+        question: "I have heard about the Global Recall/Recent Recall in Honda. Does it impact my car as well?",
+        answer: "Recalls are country-specific and applicable only to particular VINs. To check if a recall applies to your Honda car, please visit: https://www.hondacarindia.com/honda-services/important-information. Alternately, you may contact the nearest Honda dealer for assistance related to vehicle recalls."
+    },
+    {
+        question: "I have received service offers from Honda dealers. Are these standardized offers issued by Honda, or do they vary across dealerships?",
+        answer: "Honda does not officially endorse promotional or service offers provided by individual dealerships, as such offers may vary and are extended at the dealer’s discretion. For precise and up-to-date details, please contact your preferred Honda authorized dealership directly."
+    },
+    {
+        question: "I would like to share my feedback or raise a concern regarding a dealership. What are the appropriate contact details, and what escalation levels should I follow?",
+        answer: "For service-related inquiries, contact the dealership’s Customer Relationship Manager (CRM) or Service Manager (SM). For sales matters, contact the Sales Quality Manager (SQM) or Sales Manager (SM). Unresolved concerns may be directed to Honda Customer Relations at 1800 113 121 or email customer_relations@hondacarindia.com."
+    },
+    {
+        question: "I want to renew my vehicle insurance. Is it mandatory to purchase insurance through a Honda dealership, or can I renew independently?",
+        answer: "As an OEM we do not deal with insurance. The decision of insurance purchase from the dealership depends on the mutual agreement between the dealership and customer."
+    },
+    {
+        question: "I have misplaced my car’s Owner’s Manual. What steps should I take to obtain a replacement?",
+        answer: "Digital copies are available for select models on the Honda Owner’s Manual Downloads section of the official website. For other models, contact your nearest Honda dealership to arrange a replacement copy on a paid basis."
+    },
+    {
+        question: "How can I verify the emission norms applicable to my Honda vehicle and obtain a Bharat Stage (BS) Emission Certificate if required?",
+        answer: "Vehicles manufactured after 1st April 2010 comply with BS4 norms, and those manufactured after 1st April 2020 comply with BS6 norms. To verify specific emission norms or obtain a BS Emission Certificate for re-registration, email customer_relations@hondacarindia.com with a copy of your Registration Certificate (RC). The certificate is issued within 7–10 working days."
+    },
+    {
+        question: "Are parking, service estimate, and diagnostic charges applicable when my vehicle is brought in for service at a Honda authorized dealer?",
+        answer: "When you bring your vehicle to an authorized Honda dealership for service, the following charges may apply as per the dealership’s service terms and conditions. These charges are approved by Honda Cars:<br>1. Parking Charges: Applied to cover the cost of storing your vehicle safely and securely until collected.<br>2. Estimate Charges: Levied for the time and effort required to prepare a service or repair estimate.<br>3. Diagnostic Charges: Applicable for the technical expertise and time required to identify and diagnose reported vehicle concerns."
+    }
+],
+ maintenance: [
+    {
+        question: "Why is it important to follow the recommended Periodic Maintenance Schedule (PMS)?",
+        answer: "Adhering to the recommended Periodic Maintenance Schedule (PMS) ensures the vehicle delivers optimum performance, maintains safety, enhances reliability, prolongs component life, and safeguards warranty coverage. Please refer to your Owner’s Manual for the prescribed schedule and visit an authorized Honda dealership for complete service support."
+    },
+    {
+        question: "What services and procedures are included in periodic maintenance? How can I know more about the service?",
+        answer: "Periodic Maintenance comprises all essential inspections, replacements, and checks as prescribed in the Periodic Maintenance Schedule. The complete schedule is also available in the Owner’s Manual for reference."
+    },
+    {
+        question: "What is the cost of periodic maintenance service? Additionally, are there any charges applicable during free services?",
+        answer: "The cost of periodic maintenance varies as per model, mileage, and service requirements. During free services, labor charges are waived, but consumables, parts, and oils are chargeable. For model-specific service costs and detailed inclusions, please visit the Cost of Maintenance page on the Honda Cars India website or contact your nearest authorized Honda dealer."
+    },
+    {
+        question: "Are Value Added Services (VAS) included as part of the standard periodic maintenance, or are they offered separately?",
+        answer: "Value Added Services (VAS) are optional services to enhance the overall care and upkeep of your vehicle. These are not included in the scope of standard Periodic Maintenance Services. For details regarding Periodic Maintenance Services and the applicable charges, please refer to the following link: https://www.hondacarindia.com/honda-services/cost-of-maintenance or contact your nearest authorised Honda dealership."
+    },
+    {
+        question: "I want to avail pick up and drop services. Kindly confirm the charges.",
+        answer: "Pick up and drop is an optional service provided by the dealerships on a chargeable basis for your convenience. It is dependent on the distance of the pick-up location from the dealership. For more details related to charges and booking, you may contact your nearest dealership."
+    },
+    {
+        question: "How can I check when my next car service is due, and what is the process to book a service appointment? Additionally, I would like to know the approximate time required to complete the servicing.",
+        answer: "You can check your next service due through the Owner’s Manual. For recent Honda models, scheduled servicing is typically required every 10,000 km or 1 year, whichever comes first. You can also review your service history and due reminders via the Honda Connect App. Additionally, authorized Honda dealers may contact you as a reminder to bring your vehicle in for servicing.<br><br>To book a service appointment, you may contact your nearest authorized Honda dealership directly or use the Honda Connect App for convenient scheduling.<br><br>The duration of service depends on the nature of the work. Regular scheduled service usually takes 4–5 hours, while comprehensive repairs or maintenance may require additional time, which will be confirmed by your dealer."
+    },
+    {
+        question: "Is it mandatory to have my car serviced at a Honda authorized dealer? Additionally, can I avail servicing at any Honda authorized dealership, regardless of where I purchased the vehicle?",
+        answer: "It is strongly recommended to get the vehicle serviced at Honda authorized dealerships as they employ trained technicians, use specialized tools, and provide genuine Honda parts to ensure high-quality maintenance and optimal vehicle performance. You may visit any Honda authorized dealer to avail these services. To locate the nearest dealer, please refer to: https://www.hondacarindia.com/honda-dealership"
+    },
+    {
+        question: "My car is at a Honda authorized dealer for servicing or repairs, and the work is expected to take some time. Can I avail a loaner vehicle during this period?",
+        answer: "Loaner vehicle services are generally not provided by dealers. However, in case of a specific requirement, customers are advised to contact the respective Honda dealer directly to check its availability."
+    },
+    {
+        question: "How may I obtain pricing information for a particular part and proceed with its purchase?",
+        answer: "Pricing information for spare parts is available at authorized Honda dealerships only. To know the same or purchase, you may visit or contact any authorized dealer who will provide genuine parts with warranty assurance."
+    }
+],
+warranty: [
+    {
+        question: "How can I purchase Extended Warranty (EW) or Anytime Warranty (ATW)?",
+        answer: "You can purchase the Extended Warranty (EW) at any time before the expiry of your standard warranty. It is available in Limited or Unlimited kilometers options; however, the Unlimited kilometers warranty must be purchased within the first 2 years from the date of sale.<br><br>The Anytime Warranty (ATW) can be availed after the expiration of the Standard or Extended Warranty (conditions apply). It is valid for 1 year and can be renewed annually up to 10 years from the date of sale or 1,20,000 km, whichever occurs first. Continuous renewal does not require certification. If there is a break in the policy, inspection and certification are mandatory, and all pending or recommended jobs must be completed before issuing the policy.<br><br>All purchases and renewals should be processed through a Honda authorized dealer to ensure validity and warranty compliance."
+    },
+    {
+        question: "What repairs are covered under the Honda Standard Warranty?",
+        answer: "All Honda cars are warranted for defects in material and workmanship for the warranty period as per the terms and conditions. For exclusions, please refer to the warranty booklet provided along with the car's Owner’s Manual or reach out to your nearest Honda authorised dealership for more clarity."
+    },
+    {
+        question: "Which repairs and parts are covered under Honda's Extended Warranty and Anytime Warranty?",
+        answer: "All parts of your vehicle, except those specifically mentioned in the limitations section of the warranty terms and conditions, are covered under ATW/EW. For parts that are repaired or replaced within the scope of the warranty, you will not be required to pay any labor or parts charges. For complete details and further clarification, please refer to the Warranty Terms and Conditions or contact your nearest Honda authorized dealership."
+    },
+    {
+        question: "What is the warranty applicability for parts replaced on a chargeable basis at a Honda authorized dealer?",
+        answer: "Repairs and replacements performed on your Honda vehicle at a Honda Cars Authorized Dealer on a chargeable basis are warranted for 6 months or 10,000 kilometers, whichever occurs first."
+    },
+    {
+        question: "Is damage to the engine due to water entry covered under warranty/insurance?",
+        answer: "Engine damage due to water entry is attributed to external factors and is not covered under warranty. However, the same can be claimed under insurance provided you have taken the additional add-on of engine protection cover. It is recommended to refer to your car's insurance policy for detailed understanding."
+    },
+    {
+        question: "My car is under standard warranty, but the dealer is denying repair under warranty. Under what circumstances can repairs/replacements under standard warranty be denied?",
+        answer: "Warranty repairs for your Honda vehicle may be denied under the following circumstances:<br>1. Improper Maintenance – Damage resulting from neglect of scheduled maintenance or repairs not performed in accordance with Honda-approved procedures.<br>2. Use of Non-Genuine Parts or Fluids – Issues arising from the use of parts, accessories, or fluids not authorized or recommended by Honda.<br>3. External or Environmental Factors – Damage caused by accidents, collisions, natural disasters (such as floods, fire, or earthquakes), or environmental contamination, including soot, chemicals, salt, or bird droppings.<br>4. Normal Wear and Consumables – Deterioration of items subject to regular wear and tear, including oil, filters, brake pads, bulbs, and other consumable components.<br>5. Improper Installation Conditions – Damage resulting from installation or use of the vehicle or its components in unsuitable locations or conditions.<br><br>For complete details, please refer to your vehicle’s warranty terms and conditions or contact your nearest Honda authorized dealer for further clarification."
+    },
+    {
+        question: "Can I get my warranty repairs under Standard Warranty/Extended Warranty/Anytime Warranty at any Authorized Dealer across India?",
+        answer: "Yes. Warranty repairs under the Standard Warranty, Extended Warranty, or Anytime Warranty can be availed at any Honda authorized dealership across India. Honda’s authorized network ensures consistent service standards, genuine parts, and proper documentation of warranty claims regardless of the dealership location."
+    },
+    {
+        question: "What are the warranty terms and conditions for tires, battery, and accessories?",
+        answer: "Both tyres and batteries are covered against any manufacturing or material defects. Warranty claims for them are handled directly by the respective manufacturer. The warranty periods are as follows:<br>• Tyres: Covered for the duration of the vehicle’s standard warranty period.<br>• Battery: Covered for one year from the date of sale.<br><br>For inspection or performance assessment, you may visit any Honda authorized dealership."
+    },
+    {
+        question: "I am planning to sell my Honda vehicle. Can the car’s Standard Warranty, Extended Warranty, Anytime Warranty, or Roadside Assistance (RSA) be transferred to the new owner?",
+        answer: "Yes. Honda’s Extended Warranty, Anytime Warranty, and Roadside Assistance (RSA) are fully transferable to the new owner, ensuring uninterrupted coverage. The Standard Warranty will also remain valid for the vehicle irrespective of ownership. However, to maintain continuity of the policy, it is essential that all Periodic Maintenance (PM) services are carried out on time at an authorized Honda dealership."
+    }
+],
+
+  recall: [
+    {
+      question: "How can I check if my Honda vehicle is affected by a global recall?",
+      answer: "You can verify recall applicability by visiting the Honda Cars India website and entering your Vehicle Identification Number (VIN) in the ‘Recall Information’ section. Alternatively, you may contact your nearest Honda authorized dealer for assistance."
+    }
+  ],
+
+  safety: [
+    {
+        question: "My vehicle experienced a severe impact, but the airbags did not deploy. What could be the reason for this occurrence?",
+        answer: "The Supplemental Restraint System (SRS) is designed to deploy airbags only under specific conditions where they can provide maximum protection. If the impact is not near the front of the vehicle or not severe enough, the sensors on the airbag deployment system may not be triggered, and the airbags will not activate. Since crushable body parts absorb crash energy during an impact, visible damage does not always indicate airbag operation. Some collisions can result in severe damage without airbag deployment because the airbags would not have been needed or would not have provided additional protection.<br><br>It is recommended to have your vehicle inspected at a Honda authorized dealership after any moderate-to-severe collision to ensure a thorough check of the vehicle and to provide complete clarity on its condition."
+    },
+    {
+        question: "My vehicle had a minor collision; however, the airbags were deployed. What could be the probable reason for this occurrence?",
+        answer: "Airbags in your Honda vehicle deploy based on sudden deceleration detected by the SRS sensors, not solely on visible exterior damage. Even minor collisions, impacts to the vehicle frame, suspension, curbs, or potholes can trigger airbag deployment.<br><br>After an airbag deploys, it is important to have your vehicle inspected at a Honda authorized dealership. The airbags, control unit, and any activated seat belt tensioners must be replaced to ensure the SRS system functions correctly in future incidents. It is recommended to have your vehicle inspected at a Honda authorized dealership to ensure a comprehensive assessment and gain complete clarity on its condition."
+    }
+],
+
+};
+
+function showCategory(category) {
+    const container = document.getElementById('faq-container');
+    container.innerHTML = ''; 
+
+    faqs[category].forEach(faq => {
+        const faqItem = document.createElement('div');
+        faqItem.className = 'faq-item';
+
+        const question = document.createElement('div');
+        question.className = 'faq-question';
+        question.textContent = faq.question;
+
+        const answer = document.createElement('div');
+        answer.className = 'faq-answer';
+        answer.innerHTML = faq.answer;
+
+        question.onclick = () => {
+            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+        }
+
+        faqItem.appendChild(question);
+        faqItem.appendChild(answer);
+        container.appendChild(faqItem);
+    });
+}
+</script>
+</body>
+</html>
